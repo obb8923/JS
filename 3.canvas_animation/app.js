@@ -34,17 +34,11 @@ for (let i = 0; i < 20; i++) {
     new circle(randomX, randomY, randomR, randomColor, randomDx, randomDy)
   );
 }
-//circles 배열에서 원 생성
-// for (let i = 0; i < circles.length; i++) {
-//   circles[i].move(ctx, canvas);
-// }
-
 function update() {
-  //여려러개 원을 그리는 함수
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   for (let i = 0; i < circles.length; i++) {
-    let obj = circles[i];
-    obj.animate(ctx, canvas);
+    let circle = circles[i];
+    circle.animate(ctx, canvas);
   }
   requestAnimationFrame(update);
 }
