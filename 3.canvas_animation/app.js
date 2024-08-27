@@ -7,12 +7,13 @@ document.body.appendChild(canvas);
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 //문서의 크기로 재설정
-canvas.width = document.documentElement.clientWidth;
-canvas.height = document.documentElement.clientHeight;
+// canvas.width = document.documentElement.clientWidth;
+// canvas.height = document.documentElement.clientHeight;
 //body의 높이로 지정 - body는 100vw,100vh
-canvas.width = document.body.offsetWidth;
-canvas.height = document.body.offsetHeight;
-console.log(canvas.width, canvas.height);
+// canvas.width = document.body.offsetWidth;
+// canvas.height = document.body.offsetHeight;
+// console.log(canvas.width, canvas.height);
+
 //generate circles
 const circles = [];
 
