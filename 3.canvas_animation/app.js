@@ -6,13 +6,6 @@ document.body.appendChild(canvas);
 //canvas init
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-//문서의 크기로 재설정
-// canvas.width = document.documentElement.clientWidth;
-// canvas.height = document.documentElement.clientHeight;
-//body의 높이로 지정 - body는 100vw,100vh
-// canvas.width = document.body.offsetWidth;
-// canvas.height = document.body.offsetHeight;
-// console.log(canvas.width, canvas.height);
 
 //generate circles
 const circles = [];
@@ -35,12 +28,13 @@ for (let i = 0; i < 20; i++) {
     new circle(randomX, randomY, randomR, randomColor, randomDx, randomDy)
   );
 }
+
 function update() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height); // 캔버스를 초기화 (지우기)
   for (let i = 0; i < circles.length; i++) {
     let circle = circles[i];
-    circle.animate(ctx, canvas);
+    circle.animate(ctx, canvas); // 각 원의 애니메이션 업데이트
   }
-  requestAnimationFrame(update);
+  requestAnimationFrame(update); // 다음 프레임을 요청
 }
 update();

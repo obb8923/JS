@@ -47,6 +47,7 @@ canvas.addEventListener("mousemove", (e) => {
   ctx.lineTo(e.clientX, e.clientY - canvasOffsetY);
   ctx.stroke();
 });
+//마우스 클릭을 떼면?
 canvas.addEventListener("mouseup", () => {
   isDrawing = false;
   ctx.beginPath();
